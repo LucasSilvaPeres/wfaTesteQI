@@ -1,6 +1,6 @@
 ﻿namespace wfaTesteQI
 {
-	partial class Form1
+	partial class SplashScreen
 	{
 		/// <summary>
 		/// Variável de designer necessária.
@@ -29,12 +29,29 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			this.tmSplash = new System.Windows.Forms.Timer(this.components);
+			this.SuspendLayout();
+			// 
+			// tmSplash
+			// 
+			this.tmSplash.Tick += new System.EventHandler(this.tmSplash_Tick);
+			// 
+			// SplashScreen
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.BackgroundImage = global::wfaTesteQI.Properties.Resources.tela_inicial;
+			this.ClientSize = new System.Drawing.Size(856, 361);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Name = "SplashScreen";
 			this.Text = "Form1";
+			this.ResumeLayout(false);
+
 		}
 
 		#endregion
+
+		private System.Windows.Forms.Timer tmSplash;
 	}
 }
 
